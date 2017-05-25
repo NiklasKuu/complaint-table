@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+  body
+    .navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href = '/') Complaint Counter
+                button.navbar-toggle(type='button',data-toggle='collapse', data-target='#navbar-main')
+                    span.icon-bar
+                    span.icon-bar
+                        span.icon-bar
+            #navbar-main.navbar-collapse.collapse    
+                ul.nav.navbar-nav
+                    li
+                        a(href = '/about') About
+    block content
+    
+    footer
+        .row
+            .col-xs-12
+            small &copy; Niklas Kuusisto 2017
+
+script(src='/javascripts/jquery.js')
+script(src='/bootstrap/js/bootstrap.min.js')
+script(src='/javascripts/javascripts.js')

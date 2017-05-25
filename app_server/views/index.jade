@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    .container    
+        .col-xs-12
+            table.table.table-striped
+                thead
+                    tr
+                        th Date and time
+                        th Tank
+                        th Map
+                        th Complaint 
+                        th    
+                tbody#rageBody
+                    each rage in rages
+                        tr
+                            td=rage.dateTime
+                            td=rage.tank
+                            td=rage.map
+                            td=rage.reason
+                            td
+                                button.glyphicon.glyphicon-remove.remove-button(value="#{rage._id}")
+                    tr#add-rage   
+                        td
+                        td
+                            input(type="text", name="tank").form-control
+                        td
+                            input(type="text", name="map").form-control
+                        td
+                            input(type="text", name="reason").form-control
+                        td 
+                            button.glyphicon.glyphicon-ok#Check-button
+                    
