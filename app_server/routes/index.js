@@ -7,7 +7,7 @@ var apiOptions = {
 };
 //Implement this before heroku deployment
 if(process.env.NODE_ENV === "production"){
-    apiOptions.server = "https://complain-counter.herokuapp.com/";
+    apiOptions.server = "https://complain-counter.herokuapp.com";
 }
 
 
